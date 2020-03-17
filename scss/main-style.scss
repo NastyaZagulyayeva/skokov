@@ -1,0 +1,363 @@
+@import './reset.scss';
+
+
+$screen-sm-brk: 576px;
+$screen-md-brk: 768px;
+$screen-lg-brk: 992px;
+$screen-xl-brk: 1200px;
+
+$accent-color: #FFFF00;
+$secondary-color: #414146;
+$bk-slider: #424147;
+$gray: #5E5E5E;
+$black: #000000;
+$white: #FFF;
+$line-color: #CACACA;
+
+@font-face {
+    font-family: Code;
+    src: url(../assets/fonts/CODE_Light.ttf) format("truetype"), url(../assets/fonts/CODE_Light.otf) format("opentype");
+}
+
+@import './top-menu.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './sidebar.scss';
+@import './portfolio.scss';
+@import './project.scss';
+@import './blog.scss';
+@import './contact.scss';
+@import './about-us.scss';
+@import './404.scss';
+
+a:focus {
+    outline: none;
+}
+
+body,
+section,
+header,
+nav {
+    background-color: #f6f6f6;
+}
+
+$card-img-height: 200px;
+$card-capltion-height: 80px;
+$card-width: 250px;
+$card-height: $card-img-height+$card-capltion-height;
+
+#content {
+    h2 {
+        font-family: "Century Gothic";
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    p {
+        padding: 20px;
+        font-family: "Century Gothic";
+        font-size: 16px;
+        text-align: center;
+    }
+
+
+    .section-box {
+        max-height: 290px;
+        max-width: 250px;
+        color: $secondary-color;
+        position: relative;
+        overflow: hidden;
+        margin: 8px auto;
+        cursor: pointer;
+
+        h4 {
+            text-align: left;
+            font-family: Code;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            margin-bottom: 8px;
+
+        }
+
+        .box-header-overlay {
+            position: relative;
+            max-width: 250px;
+            .post-img {
+                background-color: $accent-color;
+                background-repeat: no-repeat;
+                background-position: center;
+                min-height: 208px;
+                max-height: 208px;
+                img {
+                    display: none;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .category-name {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%); 
+                    font-family: Code;
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 32px;
+                    text-transform: uppercase;
+                }
+            }
+            .description {
+                position: relative;
+                width: 100%;
+                min-height: 85px;
+                line-height: 17px;
+                letter-spacing: 0.26px;
+                background-color: $secondary-color;
+            }
+            .short-description{
+                display: block;
+                p {
+                    font-family: "Century Gothic";
+                    font-size: 13px;
+                    color: $white;  
+                }
+            }
+            .post-title {
+                display: none;
+                p {
+                    padding: 7px 20px 0;
+                    font-family: Code;
+                    font-size: 20px;
+                    text-align: left;
+                    text-transform: uppercase;
+                    line-height: 23px;
+                    color: $white;
+                    &:before {
+                        content: ""; 
+                        border: solid transparent;
+                        position: absolute;   
+                        bottom: 100%;
+                        left: 90%;
+                        border-bottom-color: $secondary-color;
+                        border-width: 15px;
+                        margin-left: -9px;
+                    }
+                }
+                .category {
+                    text-align: right;
+                    font-family: "Century Gothic";
+                    font-size: 10px;
+                    color: $white;
+                    span {
+                        color: #FFEA00;
+                    }
+                }
+            }
+            &:hover  {
+                .post-title {
+                    display: block;
+                }
+                .short-description {
+                    display: none;
+                }
+                .post-img {
+                    img {
+                        display: block;
+                    }
+                    .category-name {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+$grid-item-margin: 4px;
+$grid-item-sm-width: ($screen-sm-brk / 2) - ($grid-item-margin * 2) - 10px;
+
+section {
+    & + & {
+        padding-top: 30px;
+    }
+    .description-section {
+        padding: 30px 0;
+        font-family: "Century Gothic";
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .head-section {
+        text-transform: uppercase;
+        display: inline-block;
+        font-family: "Century Gothic";
+        padding: 5px 20px;
+        font-size: 16px;
+        background: $secondary-color;
+        color: $accent-color;
+    }
+    
+    .head-wrapper {
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: center;
+        font: 1.6em/1.1 Georgia;
+        padding: .2em 0;
+        text-shadow: 0 1px rgba(255, 255, 255, .6);
+
+        &:after,
+        &:before {
+            content: "";
+            position: relative;
+            display: inline-block;
+            width: 50%;
+            height: 2px;
+            vertical-align: middle;
+            background: #0000002e;
+            background-clip: content-box;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+        }
+
+        &:after {
+            left: .5em;
+            margin: 0 -50% 0 0;
+        }
+
+        &:before {
+            left: -.5em;
+            margin: 0 0 0 -50%;
+        }
+    }
+}
+
+
+.portfolio {
+
+    .description-section {
+        padding: 30px 0;
+        font-family: "Century Gothic";
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .grid-container {
+        padding: 0;
+
+        .row {
+            margin: 0;
+        }
+    }
+
+
+    .grid {
+        width: 100%;
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .grid-item {
+            height: 90vw;
+            float: left;
+            background: #fff;
+
+            padding: 2px;
+
+            &-img {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+
+        @media (min-width: $screen-sm-brk) {
+            .grid-item {
+                height: 275px;
+            }
+        }
+
+        @media (min-width: $screen-md-brk) {
+            .grid-item {
+                height: 275px;
+            }
+
+            .grid-item--height2 {
+                height: 400px * 0.75;
+            }
+
+            .grid-item--height3 {
+                height: 200px * 0.75;
+            }
+
+            .grid-item--height4 {
+                height: 125px * 0.75;
+            }
+        }
+    }
+
+}
+
+.client {
+
+    .owl-carousel {
+        padding: 0 38px;
+        
+        & img {
+            width: 138px;
+            margin: 0 auto;
+        }
+
+        &.owl-loaded {
+            position: relative;
+
+            .owl-prev {
+                position: absolute;
+                top: 12px;
+                left: 0;
+                height: 38px;
+                width: 38px;
+                background-color: #000;
+                background-image: url(../assets/img/arrow-left.PNG);
+                background-size: 28% auto;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .owl-next {
+                position: absolute;
+                top: 12px;
+                right: 0;
+                height: 38px;
+                width: 38px;
+                background-color: #000;
+                background-image: url(../assets/img/arrow-right.PNG);
+                background-size: 28% auto;
+                background-position: center;
+                background-repeat: no-repeat;
+
+            }
+
+        }
+    }
+}
+
+.icon-square {
+    background-color: #000;
+    font-size: 28px;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+

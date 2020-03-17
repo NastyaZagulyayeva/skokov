@@ -1,0 +1,19 @@
+{
+  "name": "test-gulp-scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp scss",
+    "watch": "gulp scss:watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-sass": "4.0.2"
+  },
+  "dependencies": {
+    "@staaky/fresco": "^2.3.1"
+  }
+}

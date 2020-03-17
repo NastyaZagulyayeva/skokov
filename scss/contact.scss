@@ -1,0 +1,77 @@
+.contact-info {
+    .map {
+        iframe {
+            width: 100%;
+            padding: 0 15px;
+        }
+    }
+    .contact-form {
+        padding: 5% 5%;
+        .form {
+            #add_feedback {
+                margin: 20px 0 0;
+                position: relative;
+                #art_name, #art_email, #art_subject, #art_comments {
+                    padding: 10px 5px;
+                    display: inline-block;
+                    width: 31%;
+                    border: 1px solid gainsboro;
+                    font-family: "Century Gothic";
+                    font-size: 15px;
+                    font-weight: bold;
+                    line-height: 30px;
+                }
+                #art_comments {
+                    width: 96%;
+                    margin: 15px 0;
+                }
+                input + input {
+                    margin-left: 1%;
+                }
+            }
+        }
+        .conact-us {
+            .widget_contact_widget{
+                margin: 20px 0 0;
+                p {
+                    font-family: "Century Gothic";
+                    font-size: 13px;
+                    font-weight: bold;
+                    line-height: 21px;
+                    a {
+                        font-family: "Century Gothic";
+                        font-size: 13px;
+                        font-weight: bold;
+                        line-height: 21px;
+                        color: $black;
+                        text-decoration: none;
+                        &:hover,
+                        &:active {
+                            color: $accent-color;
+                            background-color: $secondary-color;
+                        }
+                    }
+                }  
+            }
+        }
+
+        .form + .conact-us {
+            padding-top: 10px;
+        }
+    }
+}
+
+.button-form {
+    background-color: $black;
+    color: $white;
+    padding: 0px 16px;
+    border: 2px solid $black;
+    font-family: "Century Gothic";
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 38px;
+    &:hover,
+    &:active {
+        border-bottom: 2px solid $accent-color;
+    }
+}

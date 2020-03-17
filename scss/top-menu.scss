@@ -1,0 +1,76 @@
+header {
+    background-color: #F6F6F6;
+    img {
+        width: 75px;
+        max-width: 112px;
+        height: auto;
+    }
+    .navbar {
+        padding: 1% 3%;
+    }
+    .nav-pills {
+        margin-left: 8%;
+        .navbar-toggler {
+            border: 2px solid;
+            border-color: rgba(0, 0, 0, 1);
+        }
+    }
+
+    .navbar-style {
+        text-align: center;
+        z-index: 1;
+        .navbar-nav {
+            max-width: 750px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            .menu-item {
+                padding: 20px 10px;
+                margin: 0 2%;
+                font-family: Code, monospace;
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 700;
+                a {
+                    text-decoration: none;
+                    color: $black;
+                }
+                &:hover, &.active, &:visited {
+                    background-color: $accent-color;
+                }
+            }
+        }
+    }
+    @media (min-width: $screen-lg-brk) {
+        .navbar-style {
+            .nav-item {
+                padding: 20px 6px;
+                margin: 0 14px;
+
+                .nav-link {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+.top-image {
+    margin-bottom: 35px;
+    background-image: url(../assets/img/slider_bg.PNG);
+
+    .section-title{
+        display: inline-block;
+        margin: 3% 8%;
+        padding: 15px 54px 15px 7px;
+        text-align: left;
+        color: $accent-color;
+        background-color: $secondary-color;
+    }
+
+    h1 {
+        font-family: "Century Gothic";
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}

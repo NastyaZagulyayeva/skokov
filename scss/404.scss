@@ -1,0 +1,57 @@
+.error {
+    margin-bottom: 15%;
+    margin-top: 6%;
+    .page-title {
+        font-family: "Century Gothic";
+        font-size: 200px;
+        color: $secondary-color;
+        text-align: center;
+    }
+    .intro-text {
+        width: 41%;
+        display: block;
+        margin: 0 auto;
+        padding: 0 0 5px;
+        background-color: $secondary-color;
+        p {
+            font-family: "Century Gothic";
+            font-size: 70px;
+            font-weight: bold;
+            color: $accent-color;
+            text-align: center;
+        }
+    }
+    .proposal {
+        display: flex;
+        justify-content: center;
+        margin: 4%;
+        span {
+            width: 37px;
+            margin: 0 2%;
+            font-family: "Century Gothic";
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 27px;
+            text-align: center;
+            color: $secondary-color;
+            background-color: $accent-color;
+        }
+        .btn-link {
+            display: inline-block;
+            font-family: "Century Gothic";
+            color: #fff;
+            background-color: black;
+            padding: 6px 16px;
+            border-bottom: 2px solid black;
+        
+            &:hover,
+            &:active,
+            &:focus {
+                border-bottom-color: $accent-color;
+                color: #fff;
+                text-decoration: none;
+                outline: none;
+            }
+        }
+    }
+}

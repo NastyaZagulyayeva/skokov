@@ -1,0 +1,318 @@
+.blog-container {
+    .blog-page {
+        .blog-item {
+             background-color: $accent-color;
+            img {
+                max-width: 550px;
+                max-height: 400px;
+                width: 100%;
+                height: 100%;
+            }
+            .news-title {
+                margin: 15px 15px;
+                background-color: $accent-color;
+                a {
+                    font-family: "Century Gothic";
+                    font-size: 20px;
+                    line-height: 30px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $black;
+                }
+            }
+            .news-text, p {
+                margin: 0 20px;
+                font-family: "Century Gothic";
+                font-size: 12px;
+                color: $gray;
+            }
+            .info {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 20px;
+                p {
+                    font-family: "Century Gothic";
+                    font-size: 12px;
+                    color: $black;
+                }
+                i {
+                    span {
+                        margin: 0 2px;
+                        font-family: "Century Gothic";
+                        font-size: 12px;
+                    } 
+                }
+            }
+            .quote {
+                padding: 2px 15px;
+                font-family: "Century Gothic";
+                font-size: 20px;
+                font-style: italic;
+                color: $black;
+            }
+            .author {
+                float: right;
+                padding: 5px;
+                font-family: "Century Gothic";
+                font-size: 11px;
+                font-style: italic;
+                color: $black;
+            }
+               
+        }
+    }
+    .page-count {
+        display: flex;
+        justify-content: space-between;
+        margin: 3% 0;
+        font-family: "Century Gothic";
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $secondary-color;
+        a {
+            padding: 1%;
+            &:hover {
+                background-color: $accent-color;
+            }
+        }
+        .page-number {
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            .active {
+                background-color: $accent-color;
+                padding: 6% 9%;
+            }
+            a {
+                padding: 6% 9%;
+                color: $secondary-color;
+                text-decoration: none;
+                &:hover {
+                    background-color: $accent-color;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen-md-brk) {
+        .blog-page {
+            .blog-item {
+                .news-title {
+                    font-size: 24px;
+                }
+                .news-text {
+                    font-size: 14px;
+                }
+                .quote {
+                    font-size: 24px;
+                }
+            } 
+            .info {
+                p {
+                    font-size: 14px;
+                }
+            }
+            
+        }
+    }
+}
+
+.title-post-info {
+    margin: 0 8%;
+    background-color: $accent-color;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .news-title {
+        a {
+            font-family: "Century Gothic";
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+    }
+    
+    .info {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 20px 10px;
+        p {
+            font-family: "Century Gothic";
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 20px;
+            color: $black;
+        }
+        i {
+            color: $gray;
+            span {
+                margin: 0 2px;
+                font-family: "Century Gothic";
+                font-size: 12px;
+                font-weight: bold;
+            } 
+        }
+
+        i + p {
+            margin-left: 30px;
+        }
+        
+    }
+}
+
+.news-title {
+    padding: 15px 15px;
+    position: relative;
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $black;   
+    }
+    &:before {
+        content: ""; 
+        border: solid transparent;
+        position: absolute;   
+        bottom: 100%;
+        left: 90%;
+        border-bottom-color: $accent-color;
+        border-width: 15px;
+        margin-left: -9px;
+    }
+}
+
+.title-for-blok-post {
+    text-transform: uppercase;
+    font-family: "Century Gothic";
+    padding: 5px 20px;
+    font-size: 16px;
+    background: $secondary-color;
+    color: $accent-color;
+}
+
+.post-content {
+    margin: 5% 10%;
+    p {
+        font-family: "Century Gothic";
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 30px;
+    }
+    figure {
+        &.size-large {
+            margin: 0 2%;
+        }
+        img {
+            margin: 2% 0 2%;
+        }
+    }
+    .social-share-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 11% 0 0;
+        .social-share-btn {
+            a {
+                width: 40px;
+                text-decoration: none;
+                color: $white;
+                span {
+                    display: none;
+                }
+                &.sbtn {
+                    text-align: center;
+                    border-radius: 0;
+                    padding: 10px;
+                    margin: 0 20px 0 0;
+                    line-height: 1.825 !important;
+                }
+                &.s-twitter, &.s-facebook, &.s-googleplus, &.s-linkedin {
+                    background: $black;
+                }
+                &.s-twitter:hover, &.s-facebook:hover, &.s-googleplus:hover, &.s-linkedin:hover {
+                    color: $accent-color;
+                }
+                &.s-twitter::before {
+                    font-family: fontawesome;
+                    content: '\f099';
+                    padding-top: 1px;
+                }
+                &.s-facebook::before {
+                    font-family: fontawesome;
+                    content: '\f09a';
+                    padding: 0 2px;
+                }
+                &.s-googleplus::before {
+                    font-family: fontawesome;
+                    content: '\f1a0';
+                }
+                &.s-linkedin::before {
+                    font-family: fontawesome;
+                    content: '\f0e1';
+                }
+            }
+        }
+    }
+}
+
+.related-posts {
+    margin: 0 10%;
+    padding: 5% 0;
+    border-top: 1px solid $line-color;
+    .rel-posts {
+        margin: 5% 0 0;
+        .rel-post {
+            max-width: 303px;
+            max-height: 250px;
+            height: 100%;
+            padding: 0;
+            img {
+                max-height: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+            .news-title {
+                background-color: $accent-color;
+                padding: 5px 10px;
+                max-height: 50px;
+                a {
+                    font-family: "Century Gothic";
+                    font-size: 10px;
+                    font-weight: 600;
+                    line-height: 17px;
+                }
+            }
+        }
+        .rel-post + .rel-post {
+            padding-left: 2%;
+        }
+    }
+}
+
+.masonry-block {
+    .grid-sizer,
+    .grid-item {
+        width: 74%;
+        margin: 1% 13% 5%;
+    }
+
+    .grid-item {
+        float: left;
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+         
+    @media (min-width: $screen-md-brk) { 
+        .grid-sizer,
+        .grid-item {
+        width: 46%;
+        margin: 1% 1% -2%;
+        }
+
+        .blog-item {
+            margin-bottom: 2%;
+        }
+    }
+}
