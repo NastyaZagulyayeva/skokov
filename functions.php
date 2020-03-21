@@ -1,6 +1,7 @@
 <?php
 
 include_once(__DIR__ . '/includes/helpers.php');
+include_once(__DIR__ . '/includes/customizers/customizer.php');
 
 add_action( 'wp_enqueue_scripts', 'load_styles' );
 add_action( 'wp_footer', 'load_scripts' );

@@ -42,6 +42,7 @@
     </div>    
     <div class="container-fluid our-skills">
     <?php echo do_shortcode( '[section text="our skills"]' ); ?>
+    <p class="description-section"><?php echo get_theme_mod( 'text_for_skill'); ?></p>
         <div class="row skills">
         <?php
         while ( have_posts() ) : the_post(); ?>
@@ -53,6 +54,7 @@
     </div>
     <div class="container-fluid our-team">
     <?php echo do_shortcode( '[section text="our team"]' ); ?>
+    <p class="description-section"><?php echo get_theme_mod( 'text_for_team'); ?></p>
         <div class="row team">
             <?php 
                 global $post;

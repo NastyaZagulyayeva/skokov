@@ -12,9 +12,8 @@
                         <div class="blog-page masonry-block" id="page1">
                             <div class="grid-sizer"></div>
                             <div class="grid-item blog-item">
-                                <p class="quote">"Ability may get you to the top, but it takes
-                                    character to keep you there."</p>
-                                <p class="author">John Wooden</p>
+                                <p class="quote">"<?php echo get_theme_mod( 'quote_in_blog'); ?>"</p>
+                                <p class="author"><?php echo get_theme_mod( 'quote_author_in_blog'); ?></p>
                             </div>
                             <?php
                                 global $post;

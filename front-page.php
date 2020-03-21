@@ -9,8 +9,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>We create quality designs.</h2>
-                        <p>We specialize in Web Design / Development and Graphic Design</p>
+                        <h2><?php echo get_theme_mod( 'title_for_design'); ?></h2>
+                        <p><?php echo get_theme_mod( 'description_for_design'); ?></p>
                     </div>
                 </div>
 
@@ -56,8 +56,7 @@
                         <?php echo do_shortcode( '[section text="our work"]' ); ?>
                     </div>
                     <div class="col-12">
-                        <p class="description-section">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed d
-                        </p>
+                        <p class="description-section"><?php echo get_theme_mod( 'text_for_our_works'); ?></p>
                     </div>
                 </div>
             </div>
@@ -87,8 +86,7 @@
                         <?php echo do_shortcode( '[section text="our clients"]' ); ?>
                     </div>
                     <div class="col-12">
-                        <p class="description-section">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed d
-                        </p>
+                        <p class="description-section"><?php echo get_theme_mod( 'text_for_our_clients'); ?></p>
                     </div>
                 </div>
             </div>

@@ -41,10 +41,8 @@
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="text-wrpper">
-                                        <h2><span class="highlight">We believe <br class="d-none d-lg-inline" /> in
-                                                qualiti design</span></h2>
-                                        <p><span class="highlight">Any creative project is unique and should be provided
-                                                with the appropirte qulity</span></p>
+                                        <h2><span class="highlight"><?php echo get_theme_mod( 'title_for_slider'); ?></span></h2>
+                                        <p><span class="highlight"><?php echo get_theme_mod( 'description_for_slider'); ?></span></p>
                                     </div>
                                     <div class="btn-link-block">
                                         <a class="btn-link" href="#">Order Now</a>

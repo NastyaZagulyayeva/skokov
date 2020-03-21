@@ -8,8 +8,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <h2>We create quality designs.</h2>
-                        <p>We specialize in Web Design / Development and Graphic Design</p>
+                        <h2><?php echo get_theme_mod( 'title_for_portfolio'); ?></h2>
+                        <p><?php echo get_theme_mod( 'description_for_portfolio'); ?></p>
                     </div>
                 </div>
                 <div class="row">
