@@ -728,6 +728,7 @@ address + address {
       max-height: 70px;
       object-fit: cover; }
     .sidebar .widget_popular_posts_widget .posts .post-item .post-info {
+      width: 100%;
       padding: 0 15px; }
       .sidebar .widget_popular_posts_widget .posts .post-item .post-info p {
         font-family: "Century Gothic";
@@ -1219,14 +1220,7 @@ address + address {
     margin: 20px 0 0;
     position: relative; }
     .contact-info .contact-form .form #add_feedback #art_name, .contact-info .contact-form .form #add_feedback #art_email, .contact-info .contact-form .form #add_feedback #art_subject, .contact-info .contact-form .form #add_feedback #art_comments {
-      padding: 10px 5px;
-      display: inline-block;
-      width: 31%;
-      border: 1px solid gainsboro;
-      font-family: "Century Gothic";
-      font-size: 15px;
-      font-weight: bold;
-      line-height: 30px; }
+      width: 31%; }
     .contact-info .contact-form .form #add_feedback #art_comments {
       width: 96%;
       margin: 15px 0; }
@@ -1251,6 +1245,19 @@ address + address {
           background-color: #414146; }
   .contact-info .contact-form .form + .conact-us {
     padding-top: 10px; }
+
+#art_name, #art_email, #art_subject, #art_comments {
+  padding: 10px 5px;
+  display: inline-block;
+  max-width: 940px;
+  width: 100%;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  font-family: "Century Gothic";
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #424147; }
 
 .button-form {
   background-color: #000000;
@@ -1396,6 +1403,45 @@ address + address {
         text-decoration: none;
         outline: none; }
 
+.comments-area {
+  margin: 0 10%;
+  padding: 5% 0;
+  border-top: 1px solid #CACACA; }
+  .comments-area .comment-form .form-submit {
+    margin-left: auto;
+    padding: 15px; }
+  .comments-area .comment-list {
+    margin: 5% 0;
+    border-bottom: 1px solid #CACACA; }
+    .comments-area .comment-list .comment .comment-box {
+      display: flex;
+      padding-bottom: 30px;
+      margin: 0; }
+    .comments-area .comment-list .comment .comment-author {
+      padding: 0;
+      margin-right: 15px; }
+    .comments-area .comment-list .comment .comment-info-box {
+      padding: 0; }
+      .comments-area .comment-list .comment .comment-info-box .comment-meta {
+        display: flex; }
+        .comments-area .comment-list .comment .comment-info-box .comment-meta .author-name, .comments-area .comment-list .comment .comment-info-box .comment-meta .comment-date, .comments-area .comment-list .comment .comment-info-box .comment-meta .comment-reply-link {
+          color: #000000;
+          font-family: "Century Gothic";
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 21px;
+          word-spacing: 5px; }
+        .comments-area .comment-list .comment .comment-info-box .comment-meta p + p, .comments-area .comment-list .comment .comment-info-box .comment-meta p + a {
+          padding-left: 5px; }
+      .comments-area .comment-list .comment .comment-info-box .comment-text {
+        color: #424147;
+        font-family: "Century Gothic";
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 30px; }
+    .comments-area .comment-list .comment .children {
+      padding-left: 50px; }
+
 a:focus {
   outline: none; }
 
@@ -1515,15 +1561,6 @@ section .description-section {
   font-size: 16px;
   text-align: center; }
 
-section .head-section {
-  text-transform: uppercase;
-  display: inline-block;
-  font-family: "Century Gothic";
-  padding: 5px 20px;
-  font-size: 16px;
-  background: #414146;
-  color: #FFFF00; }
-
 section .head-wrapper {
   position: relative;
   overflow: hidden;
@@ -1548,6 +1585,15 @@ section .head-wrapper {
   section .head-wrapper:before {
     left: -.5em;
     margin: 0 0 0 -50%; }
+
+.head-section {
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: "Century Gothic";
+  padding: 5px 20px;
+  font-size: 16px;
+  background: #414146;
+  color: #FFFF00; }
 
 .portfolio .description-section {
   padding: 30px 0;

@@ -1,0 +1,55 @@
+.comments-area {
+    margin: 0 10%;
+    padding: 5% 0;
+    border-top: 1px solid $line-color;
+    .comment-form {
+        .form-submit {
+            margin-left: auto;
+            padding: 15px;
+        }
+    }
+
+    .comment-list {
+        margin: 5% 0;
+        border-bottom: 1px solid $line-color;
+        .comment {
+            .comment-box {
+                display: flex;
+                padding-bottom: 30px;
+                margin: 0;
+            }
+            .comment-author {
+                padding: 0;
+                margin-right: 15px;
+            }
+            .comment-info-box {
+                padding: 0;
+                .comment-meta {
+                    display: flex;
+                    .author-name, .comment-date, .comment-reply-link {
+                        color: $black;
+                        font-family: "Century Gothic";
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 21px;
+                        word-spacing: 5px;
+                    }
+                    p + p, p + a {
+                        padding-left: 5px;
+                    }
+                }
+                .comment-text {
+                    color: $bk-slider;
+                    font-family: "Century Gothic";
+                    font-size: 15px;
+                    font-weight: bold;
+                    line-height: 30px;
+                }
+            }
+            .children {
+                padding-left: 50px;
+            }
+        }
+
+    }
+}

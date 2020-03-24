@@ -29,6 +29,7 @@ $line-color: #CACACA;
 @import './contact.scss';
 @import './about-us.scss';
 @import './404.scss';
+@import './comments.scss';
 
 a:focus {
     outline: none;
@@ -190,16 +191,6 @@ section {
         font-size: 16px;
         text-align: center;
     }
-
-    .head-section {
-        text-transform: uppercase;
-        display: inline-block;
-        font-family: "Century Gothic";
-        padding: 5px 20px;
-        font-size: 16px;
-        background: $secondary-color;
-        color: $accent-color;
-    }
     
     .head-wrapper {
         position: relative;
@@ -233,6 +224,16 @@ section {
             margin: 0 0 0 -50%;
         }
     }
+}
+
+.head-section {
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: "Century Gothic";
+    padding: 5px 20px;
+    font-size: 16px;
+    background: $secondary-color;
+    color: $accent-color;
 }
 
 

@@ -12,14 +12,7 @@
                 margin: 20px 0 0;
                 position: relative;
                 #art_name, #art_email, #art_subject, #art_comments {
-                    padding: 10px 5px;
-                    display: inline-block;
                     width: 31%;
-                    border: 1px solid gainsboro;
-                    font-family: "Century Gothic";
-                    font-size: 15px;
-                    font-weight: bold;
-                    line-height: 30px;
                 }
                 #art_comments {
                     width: 96%;
@@ -59,6 +52,20 @@
             padding-top: 10px;
         }
     }
+}
+
+#art_name, #art_email, #art_subject, #art_comments {
+    padding: 10px 5px;
+    display: inline-block;
+    max-width: 940px;
+    width: 100%;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    font-family: "Century Gothic";
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+    color: $bk-slider;
 }
 
 .button-form {

@@ -12,7 +12,7 @@
                 <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <div class="info">
                     <i class="fa fa-heart"><span>6</span></i>
-                    <p><?php the_author_meta('display_name', $post->post_author ); ?> /<?php get_comments_number($post) ?> comments / <?= get_the_date('M. d, Y', $post); ?></p>
+                    <p><?php the_author_meta('display_name', $post->post_author ); ?> /<?php echo get_comments_number($post); ?> comments / <?= get_the_date('M. d, Y', $post); ?></p>
                 </div>
             </div>
             <div class="post-content">

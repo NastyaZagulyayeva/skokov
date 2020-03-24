@@ -317,3 +317,27 @@ function wpvkp_social_buttons($content) {
 // Please it in any widget and social buttons appear their.
 // You will need to enabled shortcode execution in widgets.
 add_shortcode('social','wpvkp_social_buttons');
+
+//Comments footer
+function mytheme_comment($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment;
+    ?>
+    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+        <div id="comment-<?php comment_ID(); ?>" class="comment-box">
+            <div class="comment-author vcard">
+                <?php echo get_avatar($comment, $size = '50', $default = 'mystery'); ?>
+            </div>
+            <div class="comment-info-box">
+                <div class="comment-meta commentmetadata">
+                    <p class="author-name"><?php echo get_comment_author_link() ?> /</p>
+                    <p class="comment-date"><?php echo get_comment_date('j.n.Y');?> <?php echo get_comment_time('H:i'); ?> /</p>
+                    <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+                </div>
+                <div class="comment-text">
+                    <?php comment_text() ?>
+                </div>
+            </div>
+        </div>
+       
+    <?php
+}
